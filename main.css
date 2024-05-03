@@ -84,11 +84,10 @@ body {
 #container div {
     display: flex;
     flex: auto;
-    border: 1px solid black;
-    border-bottom: none;
 }
 
 .row {
+    border: 1px solid black;
     background-color: white;
 }
 
