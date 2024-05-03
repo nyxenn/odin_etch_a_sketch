@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: inherit;
+    box-sizing: border-box;
+}
+
+#create-grid {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    top: -5rem;
+    left: 0;
+    right: 0;
+
+    width: 15rem;
+    height: 3rem;
+    margin: auto;
+
+    font-family: Roboto;
+    font-size: 1.5rem;
+    font-variant: all-small-caps;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+
+    z-index: 100;
+}
+
+#create-grid div {
+    height: 100%;
+    border-top: 2px solid #fefefe;
+    border-bottom: 2px solid #fefefe;
+    color: #fefefe;
+    background-color: hsl(10, 70%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#create-grid:hover div {
+    cursor: pointer;
+    filter: brightness(120%);
+}
+
+.text {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.corner {
+    width: 4rem;
+    z-index: 100;
+}
+
+.corner.left {
+    border-radius: 50% 0 0 50%;
+    border-left: 2px solid #fefefe;
+}
+
+.corner.right {
+    border-radius: 0 50% 50% 0;
+    border-right: 2px solid #fefefe;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    background-color: black;
+}
+
+/* 
+*  There's technically speaking more 'doubled' borders,
+*  but it doesn't really get in the way imo.
+*  so bye
+*/
+#container div {
+    display: flex;
+    flex: auto;
+    border: 1px solid black;
+    border-bottom: none;
+}
+
+.row {
+    background-color: white;
+}
+
+.fade-in {
+    animation: 500ms ease fade-in forwards;
+}
+
+.fade-out {
+    animation: 500ms ease fade-out forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        top: -5rem;
+    }
+
+    to {
+        opacity: 1;
+        top: 1rem;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        top: 1rem;
+    }
+
+    to {
+        opacity: 0;
+        top: -5rem;
+    }
+}
